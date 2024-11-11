@@ -1,4 +1,4 @@
-# FastAPI + Async SQLAlchemy template
+# FastAPI + Async SQLAlchemy
 
 ## Local environment
 ### Installation

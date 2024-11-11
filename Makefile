@@ -20,8 +20,8 @@ migrate:
 
 test:
 	docker compose -f test-docker-compose.yml up -d
-	docker build -t test_template:latest --file ./app/test.Dockerfile ./app
-	- docker run --network test-template --env-file ./app/production.example.env test_template:latest alembic upgrade head && pytest
+	docker build -t test:latest --file ./app/test.Dockerfile ./app
+	- docker run --network test --env-file ./app/production.example.env test:latest alembic upgrade head && pytest
 	docker compose -f test-docker-compose.yml down
 
 lint:

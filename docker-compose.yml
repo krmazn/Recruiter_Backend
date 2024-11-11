@@ -1,6 +1,6 @@
 services:
   fastapi:
-    container_name: template_fastapi
+    container_name: fastapi
     expose:
       - 8000
     build: ./app
