@@ -74,7 +74,7 @@ allowed-confusables = ["у", "е", "г", "х", "а", "р", "о", "с", "б", "У
 
 [tool.poetry]
 package-mode = false
-name = "Project_name"
+name = "Recruiting Helper"
 
 [tool.poetry.dependencies]
 python = "~3.12.0"

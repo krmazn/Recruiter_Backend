@@ -15,7 +15,7 @@ if settings.SENTRY_DSN:
 
 
 app = FastAPI(
-    title="app",
+    title="Recruiting Helper",
     openapi_url="/api/openapi.json",
     docs_url="/api/docs",
     redoc_url="/api/redoc",
