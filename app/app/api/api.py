@@ -1,3 +1,3 @@
 from fastapi import APIRouter
-
-api_router = APIRouter()
+from endpoints.user_request import router
+APIRouter.include_router(router)

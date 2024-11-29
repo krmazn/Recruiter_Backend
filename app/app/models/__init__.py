@@ -3,7 +3,7 @@ Adds support for alembic's migrations autogenrate feature.
 """
 # ruff: noqa: F401
 from .base import Base
-
 # Import your models here
-from app.models import sqlalchemy_model
+from .sqlalchemy_model import ScreeningRequest
+
 

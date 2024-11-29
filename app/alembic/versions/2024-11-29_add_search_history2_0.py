@@ -1,8 +1,8 @@
-"""add_search_history
+"""add_search_history2.0
 
-Revision ID: c7413fabaae7
+Revision ID: e017f3cba929
 Revises: f8bc58120f2f
-Create Date: 2024-11-17 21:13:23.153696
+Create Date: 2024-11-29 23:53:33.047811
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'c7413fabaae7'
+revision = 'e017f3cba929'
 down_revision = 'f8bc58120f2f'
 branch_labels = None
 depends_on = None
