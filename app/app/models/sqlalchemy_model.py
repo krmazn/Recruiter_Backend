@@ -2,10 +2,7 @@ from datetime import datetime
 from typing import Optional
 from sqlalchemy import String, DateTime
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-
-# Базовый класс для всех моделей
-class Base(DeclarativeBase):
-    pass
+from .base import Base
 
 # Модель ScreeningRequest
 class ScreeningRequest(Base):
