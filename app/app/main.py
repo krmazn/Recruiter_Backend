@@ -4,6 +4,7 @@ from fastapi_pagination import add_pagination
 
 from app.api.api import api_router
 from app.config import settings
+from .api.endpoints.user_request import router
 
 if settings.SENTRY_DSN:
     import sentry_sdk
