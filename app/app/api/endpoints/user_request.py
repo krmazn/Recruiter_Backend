@@ -16,7 +16,6 @@ def create_screening_request(request: UserRequest, session: Session):
         text=request.text, 
         questions=hardcoded_questions
         )
-
     session.add(screening_request)
     session.commit()
     session.refresh(screening_request)

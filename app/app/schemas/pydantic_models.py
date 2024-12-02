@@ -6,10 +6,8 @@ class UserRequest(BaseModel):
     
     
 class UserResponse(BaseModel):
-    id: int
     text: str
     questions: str
-    created_at: datetime
     
 
     class Config:
