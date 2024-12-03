@@ -12,3 +12,13 @@ class UserResponse(BaseModel):
 
     class Config:
             orm_mode = True 
+
+
+class ScreeningResponse(BaseModel):
+    id: int
+    text: str
+    questions: str
+    created_at: datetime
+
+    class Config:
+        orm_mode = True
