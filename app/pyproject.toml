@@ -83,12 +83,14 @@ asyncpg = "*"
 fastapi = "*"
 fastapi-pagination = "*"
 fastapi-sqlalchemy-toolkit = "*"
-pydantic = "*"
+pydantic = "2.7.4"
 pydantic-settings = "*"
 uvicorn = "*"
 email-validator = "*"
 sqlalchemy = "*"
 sqlakeyset = "*"
+prompt_engineering = {git = "https://github.com/mitya01/prompt_engineering.git", subdirectory = "prompt_engineering"}
+gigachatprompt = {git = "https://github.com/Mitya01/prompt_engineering.git", subdirectory = "prompt_engineering"}
 
 
 [tool.poetry.group.dev]

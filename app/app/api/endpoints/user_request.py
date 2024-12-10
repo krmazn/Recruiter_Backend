@@ -4,14 +4,14 @@ from app.models import ScreeningRequest
 from sqlalchemy import select
 from ..deps import Session
 from typing import List
+from gigachatprompt.prompt import generate_questions
 
 router = APIRouter()
 @router.post("/screening", response_model=UserResponse)
 async def create_screening_request(request: UserRequest, session: Session):
-    hardcoded_questions = "1. Барбоскины или Смешарики? \n 2. Фиксики или ПинКод? \n 3. Какова основная проблема вселенной 'Маша и Медведь'?"
     screening_request = ScreeningRequest( 
         text=request.text, 
-        questions=hardcoded_questions
+        questions=generate_questions('MjIyMWE1YjItZmExNi00ODNkLTlkYmEtNzYzNDU3NThjNjQ3OjYwYzYwOWExLTJmNTktNDhmOS1hNDYzLWI1OTY4MWUxZDQ5Mg==', f'"""{request.text}"""')
         )
     session.add(screening_request)
     await session.commit()
