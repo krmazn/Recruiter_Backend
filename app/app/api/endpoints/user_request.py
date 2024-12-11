@@ -12,7 +12,7 @@ router = APIRouter()
 async def create_screening_request(request: UserRequest, session: Session):
     screening_request = ScreeningRequest( 
         text=request.text, 
-        questions=generate_questions('MjIyMWE1YjItZmExNi00ODNkLTlkYmEtNzYzNDU3NThjNjQ3OjYwYzYwOWExLTJmNTktNDhmOS1hNDYzLWI1OTY4MWUxZDQ5Mg==', f'"""{request.text}"""')
+        questions=generate_questions('MjIyMWE1YjItZmExNi00ODNkLTlkYmEtNzYzNDU3NThjNjQ3OmU3MDVlYTk0LWI5M2EtNGM2NC1hNDY5LWNlYzg0NjhhZmQ5YQ==', f'"""{request.text}"""')
         )
     session.add(screening_request)
     await session.commit()
