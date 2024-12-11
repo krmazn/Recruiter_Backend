@@ -1,7 +1,8 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, status
+from uuid import UUID
 from app.schemas.pydantic_models import UserRequest, UserResponse, ScreeningResponse
 from app.models import ScreeningRequest
-from sqlalchemy import select
+from sqlalchemy import delete, select
 from ..deps import Session
 from typing import List
 from gigachatprompt.prompt import generate_questions
@@ -28,3 +29,14 @@ async def get_screening_requests(session: Session):
     screening_requests = result.scalars().all()
 
     return screening_requests
+
+@router.delete("/screening/{screening_id}", status_code=status.HTTP_204_NO_CONTENT)
+async def delete_screening_requests(session: Session, screening_id: UUID) -> None:
+    screening = (
+        await session.execute(
+            select(ScreeningRequest).filter_by(id=screening_id)
+        )
+    ).scalar_one_or_none()
+    if screening:
+        await session.delete(screening)
+        await session.commit()
