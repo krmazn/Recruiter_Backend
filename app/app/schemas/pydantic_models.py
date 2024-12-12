@@ -2,10 +2,12 @@ from pydantic import BaseModel
 from datetime import datetime
 
 class UserRequest(BaseModel):
+    job_title: str
     text: str
     
     
 class UserResponse(BaseModel):
+    job_title: str
     text: str
     questions: str
     
@@ -16,6 +18,7 @@ class UserResponse(BaseModel):
 
 class ScreeningResponse(BaseModel):
     id: int
+    job_title: str
     text: str
     questions: str
     created_at: datetime
