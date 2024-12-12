@@ -245,6 +245,21 @@ pydantic = ">=2.0.0"
 sqlalchemy = ">=2.0.0"
 
 [[package]]
+name = "gigachat"
+version = "0.1.36"
+description = "GigaChat. Python-library for GigaChain and LangChain"
+optional = false
+python-versions = "<4.0,>=3.8"
+files = [
+    {file = "gigachat-0.1.36-py3-none-any.whl", hash = "sha256:7e9e3192e8d33e9c63beac533a31290d1a2e7b1b3c57ea0b5dc26da47551db5d"},
+    {file = "gigachat-0.1.36.tar.gz", hash = "sha256:6c10ae23647946854ef98d67899e2ef239a6f675e4e1406ff08f8d56fc2160d6"},
+]
+
+[package.dependencies]
+httpx = "<1"
+pydantic = ">=1"
+
+[[package]]
 name = "gigachatprompt"
 version = "1.1"
 description = "A function that takes 2 arguments: credentials from GigaChat API and a job description and returns 5 screening questions."
@@ -1041,4 +1056,4 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.12.0"
-content-hash = "8b55f815a1901f85c6916885b7f3158c66893f4405126c90ed03bfc80340006b"
+content-hash = "43725c81ebcb9e85fc44b44f88959e99f0a0a2d03209809ce1ed444a4e3b9822"
