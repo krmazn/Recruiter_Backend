@@ -7,13 +7,15 @@ from ..deps import Session
 from typing import List
 from gigachatprompt.prompt import generate_questions
 
+gigachat_key = None  # Insert unique key to access LLM services
+
 router = APIRouter()
 @router.post("/screening", response_model=UserResponse)
 async def create_screening_request(request: UserRequest, session: Session):
     screening_request = ScreeningRequest( 
         job_title=request.job_title,
         text=request.text, 
-        questions=generate_questions('MjIyMWE1YjItZmExNi00ODNkLTlkYmEtNzYzNDU3NThjNjQ3OmU3MDVlYTk0LWI5M2EtNGM2NC1hNDY5LWNlYzg0NjhhZmQ5YQ==', f'"""{request.job_title}"""' , f'"""{request.text}"""')
+        questions=generate_questions(gigachat_key, f'"""{request.job_title}"""' , f'"""{request.text}"""')
         )
     session.add(screening_request)
     await session.commit()
